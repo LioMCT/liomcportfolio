@@ -3,149 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LioMC_ | Management & Development Portfolio</title>
+    <title>LioMC_ | Management Portfolio</title>
+    
+    <meta property="og:title" content="LioMC_ | Professional Management" />
+    <meta property="og:description" content="Sr. Moderator at SMPFinder & Owner of Nightfall Network." />
+    <meta property="og:image" content="https://mc-heads.net/avatar/LioMC_" />
+    <meta name="theme-color" content="#5865F2">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { background-color: #0d0d0f; color: #e4e4e7; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; }
-        .gradient-text { background: linear-gradient(90deg, #5865F2, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover:hover { transform: translateY(-8px); border-color: rgba(88, 101, 242, 0.4); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .hero-bg { background: radial-gradient(circle at 10% 20%, rgba(88, 101, 242, 0.1) 0%, transparent 50%); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        body { 
+            background-color: #050507; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass { 
+            background: rgba(15, 15, 20, 0.95); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border-radius: 12px;
+        }
+
+        .nightfall-card {
+            background: linear-gradient(135deg, rgba(88, 101, 242, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+            border: 1px solid rgba(88, 101, 242, 0.4);
+            box-shadow: 0 0 30px rgba(88, 101, 242, 0.1);
+        }
+
+        .gallery-img { 
+            width: 100%; height: 220px; object-fit: cover; 
+            border-radius: 8px; transition: 0.4s; 
+            cursor: pointer; border: 1px solid rgba(255,255,255,0.05); 
+        }
+        .gallery-img:hover { transform: scale(1.03); border-color: #5865F2; }
+
+        .copy-success {
+            background: #22c55e !important;
+            color: white !important;
+        }
+
+        .nav-link:hover { color: #5865F2; transition: 0.3s; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050507; }
+        ::-webkit-scrollbar-thumb { background: #1e1e26; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #5865F2; }
     </style>
 </head>
-<body class="hero-bg">
+<body>
 
-    <nav class="fixed w-full z-50 px-6 py-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass px-8 py-4">
-            <div class="text-2xl font-extrabold tracking-tighter">Lio<span class="text-blue-500">MC_</span></div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#experience" class="hover:text-white transition">Experience</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass px-6 py-3">
+            <div class="flex items-center gap-3">
+                <img src="https://mc-heads.net/avatar/LioMC_" alt="Lio" class="w-8 h-8 rounded border border-white/10">
+                <span class="text-xl font-black tracking-tighter">Lio<span class="text-blue-500">MC_</span></span>
+            </div>
+            <div class="flex gap-8 items-center">
+                <a href="#home" class="nav-link font-bold text-xs uppercase tracking-widest hidden md:block">Home</a>
+                <a href="#experience" class="nav-link font-bold text-xs uppercase tracking-widest hidden md:block">Experience</a>
+                <button onclick="copyDiscord()" id="discordBtn" class="bg-blue-600 px-5 py-2 rounded-md text-xs font-bold hover:bg-blue-700 transition flex items-center gap-2">
+                    <i class="fab fa-discord"></i> lio4488_
+                </button>
             </div>
         </div>
     </nav>
 
-    <section class="pt-48 pb-20 px-6">
+    <section id="home" class="pt-48 pb-20 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-7xl font-extrabold leading-tight">Elite <br><span class="gradient-text">Management.</span></h1>
-                <p class="text-xl text-gray-400 mt-6 leading-relaxed">
-                    Senior Moderator at <span class="text-white">SMPFinder</span> and Moderator for <span class="text-white">Tier Tests</span>. 
-                    Specializing in high-level staff mentorship and community scalability.
+            <div class="text-center md:text-left">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-[0.9] tracking-tighter">
+                    STAFF <br><span class="text-blue-500">LEADERSHIP.</span>
+                </h1>
+                <p class="text-gray-300 text-lg mb-8 max-w-lg leading-relaxed">
+                    Veteran Minecraft Administrator and Discord Developer. Specialized in high-stakes moderation, staff training, and large-scale community architecture.
                 </p>
-                <div class="mt-10 flex gap-4">
-                    <a href="#contact" class="bg-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">Contact Me</a>
-                    <a href="#experience" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition">Experience</a>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#experience" class="bg-white text-black px-8 py-4 rounded-lg font-bold hover:bg-gray-200 transition">View Portfolio</a>
+                    <a href="mailto:lio4488mc@gmail.com" class="glass px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition">Send Email</a>
                 </div>
             </div>
-            <div class="flex justify-center">
-                <img src="https://mc-heads.net/body/LioMC_/right" class="h-[500px] drop-shadow-[0_0_80px_rgba(88,101,242,0.2)]">
+            <div class="flex justify-center relative">
+                <div class="absolute inset-0 bg-blue-500/10 blur-[120px] rounded-full"></div>
+                <img src="https://mc-heads.net/body/LioMC_/right" class="h-96 md:h-[550px] relative z-10 drop-shadow-2xl">
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 px-6 bg-white/[0.02]">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Why I am a <span class="text-blue-500">Top-Tier</span> Staff Member</h2>
-            <div class="glass p-10 text-left space-y-6 text-gray-300 leading-relaxed">
-                <p>
-                    With experience across networks ranging from 70 to 35,000 members, I have developed a standard of <strong>professionalism and reliability</strong> that ensures server stability. My approach goes beyond simple chat moderation; I focus on the structural health of a community.
-                </p>
-                <p>
-                    I specialize in <strong>Staff Development</strong>. At RascalPVP and VoyageNetwork, I don't just "watch" staff—I write the guides they follow, recruit the talent, and mentor junior managers to ensure the team functions like a well-oiled machine even when I am offline.
-                </p>
-                <p>
-                    My technical expertise in <strong>Discord Development and Ticket Handling</strong> allows me to handle high-priority escalations with ease. Whether it’s managing Tier Tests' 31k+ total members or organizing new server launches for Voyage, I bring a calm, decisive leadership style to every situation.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 px-6">
+    <section id="nightfall" class="py-10 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-16">Community <span class="text-blue-500">Legacy</span></h2>
+            <div class="nightfall-card p-10 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">In Development</span>
+                    </div>
+                    <h2 class="text-4xl font-black italic">Nightfall Network</h2>
+                    <p class="text-gray-300 mt-2 text-lg">Overseeing full production and community architecture as <strong class="text-white">Owner</strong>.</p>
+                </div>
+                <a href="#home" class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3 rounded-lg text-sm font-bold transition">Back to Top</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-8">Why Hire <span class="text-blue-500">LioMC_?</span></h2>
+            <div class="glass p-10 text-left space-y-6 text-gray-300 text-lg leading-relaxed">
+                <p>
+                    I have extensive experience managing and moderating large Minecraft and Discord communities. Currently, I serve as <strong>Sr. Moderator on SMPFinder</strong>, supporting the community, handling tickets, and mentoring lower staff. I am also staff on <strong>Tier Tests 1.8</strong> (Trial Moderator, 24k+ members) and <strong>Tier Tests 1.9+</strong> (Moderator, 7.2k+ members).
+                </p>
+                <p>
+                    As <strong>Manager of RascalPVP</strong> (1k members), I oversee staff, support owners in decision-making, and write staff guides. At <strong>VoyageNetwork</strong> (Co-Owner, 2.4k members), I managed staff recruitment, moderated in-game/Discord, and organized new server launches.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+                <i class="fas fa-history text-blue-500"></i> WORK HISTORY
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass p-6">
+                    <span class="text-yellow-500 text-[10px] font-black uppercase tracking-widest">Co-Owner</span>
+                    <h3 class="text-xl font-bold mt-1">MaceSMP.net</h3>
+                    <p class="text-gray-400 text-sm mt-3">300 Avg Players | 3.5k Discord. Feather Client Partner.</p>
+                </div>
+                <div class="glass p-6 border-blue-500/30">
+                    <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">Sr. Moderator</span>
+                    <h3 class="text-xl font-bold mt-1">SMPFinder</h3>
+                    <p class="text-gray-400 text-sm mt-3">35k Members. Ticket handling & staff mentorship.</p>
+                </div>
+                <div class="glass p-6">
+                    <span class="text-yellow-500 text-[10px] font-black uppercase tracking-widest">Co-Owner</span>
+                    <h3 class="text-xl font-bold mt-1">VoyageNetwork</h3>
+                    <p class="text-gray-400 text-sm mt-3">2.5k Discord. Staff recruitment & server organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 px-6 bg-white/[0.01]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black mb-10"><i class="fas fa-folder-open text-blue-500 mr-3"></i> WORK GALLERY</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="glass p-3">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Staff+Guides" class="gallery-img">
+                    <p class="mt-3 text-xs font-bold text-gray-400 px-1">PROFESSIONAL STAFF DOCUMENTATION</p>
+                </div>
+                <div class="glass p-3">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Discord+Bot+Setup" class="gallery-img">
+                    <p class="mt-3 text-xs font-bold text-gray-400 px-1">CUSTOM BOT CONFIGURATION</p>
+                </div>
+                <div class="glass p-3">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Management+System" class="gallery-img">
+                    <p class="mt-3 text-xs font-bold text-gray-400 px-1">IN-GAME ADMIN SYSTEMS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass p-12 text-center">
+            <h2 class="text-5xl font-black mb-6">HIRE ME.</h2>
+            <p class="text-gray-400 mb-10 text-lg leading-relaxed">Available for Management, Senior Moderation, or Discord Development roles.</p>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass p-8 card-hover">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Current Role</span>
-                        <span class="text-gray-500 text-sm">35k Members</span>
-                    </div>
-                    <h3 class="text-2xl font-bold">SMPFinder — Sr. Moderator</h3>
-                    <p class="text-gray-400 mt-4 text-sm leading-relaxed">Direct support for the community, mastering ticket escalations, and providing essential mentorship to junior staff members.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-10">
+                <div class="text-center">
+                    <p class="text-[10px] font-black text-blue-500 uppercase mb-2">Discord</p>
+                    <p class="text-2xl font-bold">lio4488_</p>
                 </div>
-
-                <div class="glass p-8 card-hover border-blue-500/10">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-xs font-bold text-purple-400 tracking-widest uppercase">Multi-Role</span>
-                        <span class="text-gray-500 text-sm">31k+ Total</span>
-                    </div>
-                    <h3 class="text-2xl font-bold">Tier Tests 1.8 & 1.9+</h3>
-                    <p class="text-gray-400 mt-4 text-sm leading-relaxed">Moderator & Trial Mod. Responsible for ticket management, community assistance, and training new Trial Moderators in high-traffic environments.</p>
-                </div>
-
-                <div class="glass p-8 card-hover">
-                    <h3 class="text-2xl font-bold">RascalPVP — Manager</h3>
-                    <p class="text-gray-400 mt-4 text-sm">Full staff oversight, writing official staff guides, and serving as a key advisor to owners for server-wide decision-making.</p>
-                </div>
-
-                <div class="glass p-8 card-hover">
-                    <h3 class="text-2xl font-bold">VoyageNetwork — Co-Owner</h3>
-                    <p class="text-gray-400 mt-4 text-sm">Organized server launches, handled in-game/Discord moderation, and spearheaded recruitment to build an active, professional team.</p>
-                </div>
-            </div>
-
-            <div class="mt-12 glass p-8">
-                <h4 class="text-xl font-bold mb-6 flex items-center gap-2"><i class="fas fa-history text-blue-500"></i> Previous Leadership</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sm text-gray-400">
-                    <div><strong>MaceSMP:</strong> Co-Owner (300 Avg)</div>
-                    <div><strong>TimeSMP:</strong> Owner (1k Members)</div>
-                    <div><strong>MaceGen:</strong> Co-Owner (1.3k Members)</div>
-                    <div><strong>CorruptFFA:</strong> Helper (1.6k Members)</div>
-                    <div><strong>EmberSMP:</strong> Admin (700 Members)</div>
-                    <div><strong>Cosmic Tiers:</strong> Head Manager</div>
+                <div class="text-center">
+                    <p class="text-[10px] font-black text-blue-500 uppercase mb-2">Email</p>
+                    <p class="text-2xl font-bold lowercase">lio4488mc@gmail.com</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto glass p-12 text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-4xl font-bold mb-4">Let's Build Something Great.</h2>
-                <p class="text-gray-400 mb-10">I am currently accepting inquiries for Management, Senior Moderation, or Discord Development roles.</p>
-                
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 glass flex items-center justify-center text-blue-500 text-xl">
-                            <i class="fab fa-discord"></i>
-                        </div>
-                        <div class="text-left">
-                            <p class="text-xs text-gray-500 uppercase font-bold">Discord Handle</p>
-                            <p class="text-lg font-bold">lio4488_</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 glass flex items-center justify-center text-blue-500 text-xl">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="text-left">
-                            <p class="text-xs text-gray-500 uppercase font-bold">Email Address</p>
-                            <p class="text-lg font-bold">lio4488mc@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center text-gray-600 text-xs">
-        &copy; 2026 LioMC_ Portfolio • Designed for Performance
+    <footer class="py-10 text-center text-gray-700 text-[10px] uppercase font-bold tracking-[0.2em]">
+        LioMC_ Portfolio &bull; 2026 &bull; Admin Access Protected
     </footer>
+
+    <script>
+        function copyDiscord() {
+            const btn = document.getElementById('discordBtn');
+            navigator.clipboard.writeText('lio4488_');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            btn.classList.add('copy-success');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('copy-success');
+            }, 2000);
+        }
+    </script>
 
 </body>
 </html>
